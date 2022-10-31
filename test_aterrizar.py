@@ -17,11 +17,13 @@ def test_a48_puede_venderse_a_ro():
 
     assert a48.vendido_a(ro)
     assert a48.esta_vendido()
+    assert not a48.esta_reservado()
 
 
 def test_si_a48_no_se_vende_no_esta_vendido():
     assert not a48.vendido_a(ro)
     assert not a48.esta_vendido()
+    assert not a48.esta_reservado()
 
 
 def test_si_viene_ana_y_compra_un_asiento_vendido_no_se_vende():
@@ -37,4 +39,5 @@ def test_si_viene_ana_y_compra_un_asiento_vendido_se_reserva():
     a48.venderse(ana)
 
     assert a48.reservado_a(ana)
+    assert a48.esta_vendido()
     assert a48.esta_reservado()
