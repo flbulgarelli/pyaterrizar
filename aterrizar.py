@@ -54,3 +54,6 @@ class Asiento:
 
     def esta_reservado(self):
         return self.estado.esta_reservado()
+
+    def liberar_reservas(self):
+        pass
